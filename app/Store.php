@@ -18,4 +18,9 @@ class Store extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public static function scopePersonalize()
+    {
+        return self::where('user_id', auth()->user()->id);
+    }
 }
