@@ -26,6 +26,6 @@ class Store extends Model
 
     public static function findByStoreName($storeName)
     {
-        return self::where('store_name', $storeName);
+        return self::where('store_name', $storeName)->first();
     }
 }
