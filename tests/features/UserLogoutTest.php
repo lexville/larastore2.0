@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class UserLogoutTest extends TestCase
 {
     use DatabaseMigrations;
-    
+
     /**
      * A basic test example.
      *
@@ -27,7 +27,7 @@ class UserLogoutTest extends TestCase
             'password' => bcrypt('secret'),
         ]);
 
-        $this->visit('/register')
+        $this->visit('/login')
             ->type('lex@email.com', 'email')
             ->type('secret', 'password')
             ->press('Login')
