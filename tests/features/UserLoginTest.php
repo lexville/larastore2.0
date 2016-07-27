@@ -27,7 +27,7 @@ class UserLoginTest extends TestCase
             'password' => bcrypt('secret'),
         ]);
 
-        $this->visit('/register')
+        $this->visit('/login')
             ->type('lex@email.com', 'email')
             ->type('secret', 'password')
             ->press('Login')
