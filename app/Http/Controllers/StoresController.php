@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Store;
 use App\Http\Requests;
+use App\Http\Requests\StoreRequest;
 
 class StoresController extends Controller
 {
@@ -24,7 +25,7 @@ class StoresController extends Controller
      *
      * @return redirect to root page
      */
-    public function store(Request $request)
+    public function store(StoreRequest $request)
     {
         $newStore = new Store;
         $newStore->store_name = $request->input('store_name');
