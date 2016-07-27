@@ -28,3 +28,8 @@ Route::get('/store/create', [
 Route::post('/store/create', [
     'uses' => 'StoresController@store',
 ]);
+
+Route::get('/store/{username}', [
+    'uses' => 'StoresController@find',
+    'as'   => 'stores.show'
+]);
