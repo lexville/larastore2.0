@@ -23,4 +23,9 @@ class Store extends Model
     {
         return self::where('user_id', auth()->user()->id);
     }
+
+    public static function findByStoreName($storeName)
+    {
+        return self::where('store_name', $storeName);
+    }
 }
