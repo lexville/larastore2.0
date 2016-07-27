@@ -11,6 +11,11 @@ use App\Product;
 
 class StoresController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['find']]);
+    }
+    
     public function find($storeName)
     {
         $store = Store::findByStoreName($storeName);
