@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $allStores = Store::personalize()->paginate(5);
+        $allStores = Store::personalize()->paginate(10);
 
         return view('welcome', ['allStores' => $allStores]);
     }
