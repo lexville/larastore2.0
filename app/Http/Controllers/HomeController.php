@@ -27,6 +27,6 @@ class HomeController extends Controller
     {
         $allStores = Store::personalize()->paginate(5);
 
-        return view('home', ['allStores' => $allStores]);
+        return view('welcome', ['allStores' => $allStores]);
     }
 }
