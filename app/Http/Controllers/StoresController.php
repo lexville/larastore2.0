@@ -10,6 +10,12 @@ use App\Http\Requests\StoreRequest;
 
 class StoresController extends Controller
 {
+    public function find($storeName)
+    {
+        $store = Store::findByStoreName($storeName);
+
+        return view('stores.show', ['store' => $store]);
+    }
     /**
      * Method to show the create view
      *
