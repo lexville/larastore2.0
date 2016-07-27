@@ -23,7 +23,7 @@ class UserCanCreateProductForAStore extends TestCase
     {
         $user = factory(User::class)->create();
 
-        $store = factory(Store::class)->create([
+        factory(Store::class)->create([
             'store_name' => 'New store',
             'store_description' => 'New store description found here',
             'user_id' => 1,
