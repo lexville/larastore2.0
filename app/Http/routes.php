@@ -33,3 +33,8 @@ Route::get('/store/{username}', [
     'uses' => 'StoresController@find',
     'as'   => 'stores.show'
 ]);
+
+Route::get('/store/{username}/product/create', [
+    'uses' => 'ProductsController@getCreateProduct',
+    'as'   => 'products.create'
+]);
