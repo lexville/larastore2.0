@@ -23,5 +23,6 @@
                 @endforeach
             </tbody>
          </table>
+         {{ $allProducts->render() }}
     </div>
 @stop
