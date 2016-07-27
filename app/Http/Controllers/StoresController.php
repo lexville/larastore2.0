@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Store;
 use App\Http\Requests;
 use App\Http\Requests\StoreRequest;
+use App\Product;
 
 class StoresController extends Controller
 {
@@ -14,7 +15,12 @@ class StoresController extends Controller
     {
         $store = Store::findByStoreName($storeName);
 
-        return view('stores.show', ['store' => $store]);
+        $allProducts = Product::where('store_id', $store->id)->paginate(10);
+
+        return view('stores.show', [
+            'store' => $store,
+            'allProducts' =>$allProducts,
+        ]);
     }
     /**
      * Method to show the create view
