@@ -38,3 +38,7 @@ Route::get('/store/{username}/product/create', [
     'uses' => 'ProductsController@getCreateProduct',
     'as'   => 'products.create'
 ]);
+
+Route::post('/store/{store}/product/create', [
+    'uses' => 'ProductsController@postCreateProduct'
+]);

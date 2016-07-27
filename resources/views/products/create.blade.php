@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
+        <a href="/"
+        class="btn btn-primary pull-right">
+            Back to stores
+        </a>
         @if (count($errors))
             <div class="alert alert-danger">
                 <ul>
@@ -11,7 +15,7 @@
             </div>
         @endif
         <h2>Add New Product</h2>
-        {!! Form::open(array()) !!}
+        {!! Form::open(array('route' => ['products.create', $store->id], 'method' => 'POST')) !!}
 
         <div class="form-group">
             {!! Form::label('product_name', 'Product Name:', ['class' => 'control-label']) !!}
