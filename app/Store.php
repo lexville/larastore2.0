@@ -28,4 +28,9 @@ class Store extends Model
     {
         return self::where('store_name', $storeName)->first();
     }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
