@@ -22,7 +22,7 @@ class UserRegistrationTest extends TestCase
     public function testUserCanRegister()
     {
         $this->visit('/register')
-            ->typre('lexville', 'name')
+            ->type('lexville', 'name')
             ->type('lex@email.com', 'email')
             ->type('secret', 'password')
             ->type('secret', 'password_confirmation')
