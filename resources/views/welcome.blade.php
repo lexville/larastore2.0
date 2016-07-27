@@ -14,7 +14,7 @@
             <tbody>
                 @foreach($allStores as $store)
                 <tr>
-                    <td>{{ $store->store_name }}</td>
+                    <td><a href="/store/{{ $store->id }}/">{{ $store->store_name }}</a></td>
                     <td>{{ $store->store_description}}</td>
                 </tr>
                 @endforeach
