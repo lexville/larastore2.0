@@ -15,6 +15,18 @@ class StoresController extends Controller
      *
      * @return Store create view
      */
+    public function index()
+    {
+        $allStores = Store::personalize()->paginate(5);
+
+        return view('welcome', ['allStores' => $allStores]);
+    }
+
+    /**
+     * Method to show the create view
+     *
+     * @return Store create view
+     */
     public function show()
     {
         return view('stores.create');
