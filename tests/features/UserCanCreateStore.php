@@ -32,4 +32,18 @@ class UserCanCreateStore extends TestCase
             ->press('Create Store')
             ->seeInDatabase('stores', ['store_name' => 'New store']);
     }
+
+    public function testCreateStoreIfValidationPasses()
+    {
+        $user = factory(User::class)->create();
+
+        $this->actingAs($user)
+            ->visit('/')
+            ->click('Add new store')
+            ->seePageIs('/store/create')
+            ->type('New store', 'store_name')
+            ->type('New description', 'store_description')
+            ->press('Create Store')
+            ->notSeeInDatabase('stores', ['store_name' => 'New store']);
+    }
 }
