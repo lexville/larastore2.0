@@ -25,7 +25,7 @@ class UserCanCreateStore extends TestCase
 
         $this->actingAs($user)
             ->visit('/')
-            ->press('Add new store')
+            ->click('Add new store')
             ->seePageIs('/store/create')
             ->type('New store', 'store_name')
             ->type('New store description found here', 'store_description')
