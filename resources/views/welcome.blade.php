@@ -7,8 +7,8 @@ Larastore | Home
 @section('content')
 <div class="container">
     @if(auth()->check())
+    <a href="/store/create" class="btn btn-raised btn-primary pull-right">Add new store</a>
         @if(count($allStores) > 0)
-            <a href="/store/create" class="btn btn-raised btn-primary pull-right">Add new store</a>
             <table class="table table-hover">
                 <thead>
                   <tr>
