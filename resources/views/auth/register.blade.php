@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+Larastore | Register
+@stop
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -68,7 +72,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-raised btn-primary">
                                     <i class="fa fa-btn fa-user"></i> Register
                                 </button>
                             </div>

@@ -1,10 +1,14 @@
 @extends('layouts.app')
 
+@section('title')
+Larastore | Home
+@stop
+
 @section('content')
 <div class="container">
     @if(auth()->check())
         @if(count($allStores) > 0)
-            <a href="/store/create" class="btn btn-primary pull-right">Add new store</a>
+            <a href="/store/create" class="btn btn-raised btn-primary pull-right">Add new store</a>
             <table class="table table-hover">
                 <thead>
                   <tr>

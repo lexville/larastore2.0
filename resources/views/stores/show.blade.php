@@ -1,9 +1,12 @@
 @extends('layouts.app')
+@section('title')
+Larastore | Show store
+@stop
 @section('content')
     <div class="container">
         @if(auth()->check())
             <a href="/store/{{ $store->store_name }}/product/create"
-            class="btn btn-primary pull-right">
+            class="btn btn-raised btn-primary pull-right">
                 Add new product
             </a>
         @endif
@@ -18,7 +21,7 @@
                 <tbody>
                     @foreach($allProducts as $product)
                     <tr>
-                        <td><a href="#">{{ $product->product_name }}</a></td>
+                        <td>{{ $product->product_name }}</td>
                         <td>{{ $product->product_description}}</td>
                     </tr>
                     @endforeach

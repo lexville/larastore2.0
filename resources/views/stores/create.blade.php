@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+Larastore | Create store
+@stop
 @section('content')
     <div class="container">
         @if (count($errors))
@@ -22,7 +25,7 @@
             {!! Form::label('store_description', 'Store Description:', ['class' => 'control-label']) !!}
             {!! Form::textarea('store_description', null, ['class' => 'form-control']) !!}
         </div>
-        {!! Form::submit('Create Store', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit('Create Store', ['class' => 'btn btn-raised btn-primary']) !!}
         {!! Form::close() !!}
     </div>
 @stop

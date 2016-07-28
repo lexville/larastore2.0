@@ -1,8 +1,11 @@
 @extends('layouts.app')
+@section('title')
+Larastore | Create product
+@stop
 @section('content')
     <div class="container">
         <a href="/"
-        class="btn btn-primary pull-right">
+        class="btn btn-raised btn-primary pull-right">
             Back to stores
         </a>
         @if (count($errors))
@@ -26,7 +29,7 @@
             {!! Form::label('product_description', 'Product Description:', ['class' => 'control-label']) !!}
             {!! Form::textarea('product_description', null, ['class' => 'form-control']) !!}
         </div>
-        {!! Form::submit('Create product', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit('Create product', ['class' => 'btn btn-raised btn-primary']) !!}
         {!! Form::close() !!}
     </div>
 @stop
